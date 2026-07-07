@@ -1,3 +1,32 @@
-title: The Masood Lab
-description: Bridging computational biology and translational oncology.
-theme: just-the-docs # A very clean, academic-style theme
+# Site Settings
+title: "The Masood Lab"
+description: "Bioinformatics and Computational Systems Biology"
+url: "https://MasoodLabIU.github.io"
+baseurl: ""
+
+# Theme settings
+remote_theme: "mmistakes/minimal-mistakes"
+minimal_mistakes_skin: "air" 
+
+
+nav:
+  main:
+    - title: "Home"
+      url: /
+    - title: "People"
+      url: /people/
+    - title: "Publications"
+      url: /publications/
+    - title: "News"
+      url: /news/
+    - title: "Tools"
+      url: /tools/
+
+defaults:
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      sidebar:
+        nav: "main"
