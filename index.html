@@ -25,14 +25,15 @@
         }
 
         /* Centered Content */
-        .container { max-width: 800px; margin: 3rem auto; padding: 0 2rem; text-align: center; }
+        .container { max-width: 900px; margin: 3rem auto; padding: 0 2rem; text-align: center; }
         .mission-box { 
             background-color: var(--primary-red); 
             color: var(--white); 
-            padding: 2.5rem; 
+            padding: 3rem; 
             border-radius: 8px; 
             margin-top: 2rem;
-            line-height: 1.6;
+            line-height: 1.8;
+            font-size: 1.1rem;
         }
         
         /* Sticky Footer */
@@ -59,7 +60,8 @@
 <div class="container">
     <h1>Masood Lab</h1>
     <div class="mission-box">
-        <p>At Masood Lab, our mission is to unravel the intricate world of tumors and their microenvironments at the single-cell level. We employ cutting-edge single-cell and spatial techniques, supported by advanced computational analysis, to uncover novel biomarkers and potent therapeutic solutions.</p>
+        <p>At the Masood Lab, we are dedicated to transforming our understanding of cancer biology through the lens of translational oncology and advanced computational science. Our research program centers on deconstructing the tumor microenvironment (TME) at single-cell resolution, investigating how complex cellular interactions dictate disease progression, therapeutic resistance, and clinical outcomes.</p>
+        <p>By integrating high-dimensional spatial transcriptomics, single-cell multi-omics, and custom bioinformatics pipelines, we aim to map the architecture of the tumor ecosystem. Our mission is to bridge the gap between bench-side discovery and clinical application, identifying novel actionable targets that empower the next generation of precision immunotherapy and symptom management strategies. We are committed to fostering an evidence-based approach that turns complex data into meaningful improvements in patient care and medical policy.</p>
     </div>
 </div>
 
@@ -72,7 +74,7 @@
     window.addEventListener('scroll', () => {
         const img = document.getElementById('hero-img');
         const scrollY = window.scrollY;
-        // Adjust zoomRate to change how quickly it zooms out
+        // The scale starts at 1.5 and zooms out to 1.0 as you scroll down
         const zoomRate = 0.001; 
         const newScale = Math.max(1, 1.5 - (scrollY * zoomRate));
         img.style.transform = `scale(${newScale})`;
