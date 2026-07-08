@@ -6,16 +6,21 @@
     <style>
         :root { --primary-red: #811218; --white: #ffffff; --light-gray: #f9f9f9; --footer-bg: #1a1a1a; }
         body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; background-color: var(--light-gray); padding-bottom: 175px; }
+        
+        /* Compact Header */
         header { position: sticky; top: 0; z-index: 1000; background-color: var(--primary-red); padding: 0.75rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
         header img { height: 60px; width: auto; display: block; }
         nav { display: flex; gap: 25px; }
         .nav-link { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1rem; padding: 7.5px 12.5px; border-radius: 6px; transition: background-color 0.3s, color 0.3s; }
         .nav-link:hover { background-color: var(--white); color: var(--primary-red); }
+        
         .container { max-width: 900px; margin: 2rem auto; padding: 2rem; background: var(--white); border-radius: 8px; }
         h2 { color: var(--primary-red); border-bottom: 2px solid var(--primary-red); padding-bottom: 0.5rem; }
         .year-title { font-size: 1.25rem; color: var(--primary-red); border-bottom: 1px solid var(--primary-red); margin: 2rem 0 1rem; }
         ul { padding-left: 20px; }
         li { margin-bottom: 10px; font-size: 0.95rem; }
+        
+        /* Compact Sticky Footer */
         .sticky-footer { position: fixed; left: 0; bottom: 0; width: 100%; background-color: var(--footer-bg); color: #cccccc; padding: 50px 5%; font-size: 1rem; z-index: 1000; box-shadow: 0 -2px 8px rgba(0,0,0,0.4); box-sizing: border-box; }
     </style>
 </head>
@@ -32,9 +37,97 @@
 </header>
 <div class="container">
     <h2>Publications</h2>
+    
     <h3 class="year-title">2026</h3>
-    <ul><li>Wang Q, et al. "Iron diminishes immunosuppressive macrophages and enhances anti-PD-1 immunotherapy in breast cancer models." <em>J Exp Clin Cancer Res</em>. 2026.</li></ul>
-    <!-- ... (Truncated for brevity; continue list as previously generated) -->
+    <ul>
+        <li>Wang Q, Adams EL, Poole RA, Soleimani T, Wang GX, Li H, Capitano ML, <strong>Ashiq Masood</strong>, Abrams SI, Lee KP, Zhang S, Opyrchal M. "Iron diminishes immunosuppressive macrophages and enhances anti-PD-1 immunotherapy in breast cancer models." <em>J Exp Clin Cancer Res</em>. 2026;45(1):70.</li>
+        <li>Bandi DSR, Sarvesh S, Nagaraju GP, Kim H, Foote J, Bae S, Yoon KJ, Malla M, <strong>Ashiq Masood</strong>, Akce M, Liu ZR, El-Rayes BF. "ProAgio, a Novel Integrin αvβ3 Targeted Cytotoxin, Suppresses Tumor Growth and Reprograms the PDAC Microenvironment." <em>bioRxiv</em> [Preprint]. 2026.</li>
+        <li>Mosher CE, Shinn EH, Addington EL, Wu W, Bricker JB, Helft PR, Turk AA, Vater LB, <strong>Ashiq Masood</strong>, Jalal SI, Loehrer PJ Sr, Champion VL, Johns SA. "Protocol of a randomized trial of acceptance and commitment therapy for patient fatigue interference and caregiver burden in advanced gastrointestinal cancer." <em>Contemp Clin Trials</em>. 2026;160:108168.</li>
+    </ul>
+
+    <h3 class="year-title">2025</h3>
+    <ul>
+        <li>Parajuli B, et al. "Primary tumor microbiomes predict distant metastasis of colorectal cancer." <em>NPJ Precis Oncol</em>. 2025;9(1):405.</li>
+        <li>Parajuli B, et al. "Primary tumor microbiomes predict distant metastasis of colorectal cancer." <em>bioRxiv</em> [Preprint]. 2025.</li>
+        <li>Nagaraju GP, et al. "Paricalcitol plus hydroxychloroquine enhances gemcitabine activity and induces mesenchymal to epithelial transition in pancreatic ductal adenocarcinoma: A single cell RNA-seq analysis." <em>Cancer Lett</em>. 2025;625:217809.</li>
+        <li>Ladaika CA, et al. "LSD1 inhibition attenuates targeted therapy-induced lineage plasticity in BRAF mutant colorectal cancer." <em>Mol Cancer</em>. 2025;24(1):122.</li>
+        <li>Nagaraju GP, et al. "Mechanism of enhancing chemotherapy efficacy in pancreatic ductal adenocarcinoma with paricalcitol and hydroxychloroquine." <em>Cell Rep Med</em>. 2025;6(1):101881.</li>
+    </ul>
+
+    <h3 class="year-title">2024</h3>
+    <ul>
+        <li>Ladaika CA, et al. "LSD1 inhibition attenuates targeted therapy-induced lineage plasticity in BRAF V600E colorectal cancer." <em>bioRxiv</em> [Preprint]. 2024.</li>
+        <li>Khaliq AM, et al. "Spatial transcriptomic analysis of primary and metastatic pancreatic cancers highlights tumor microenvironmental heterogeneity." <em>Nat Genet</em>. 2024;56(11):2455-2465.</li>
+        <li>Ghobashi AH, et al. "Single-Cell Profiling Reveals the Impact of Genetic Alterations on the Differentiation of Inflammation-Induced Murine Colon Tumors." <em>Cancers (Basel)</em>. 2024;16(11):2040.</li>
+    </ul>
+
+    <h3 class="year-title">2023</h3>
+    <ul>
+        <li>Qin S, et al. "Atezolizumab plus bevacizumab versus active surveillance in patients with resected or ablated high-risk hepatocellular carcinoma (IMbrave050): a randomised, open-label, multicentre, phase 3 trial." <em>Lancet</em>. 2023;402(10415):1835-1847.</li>
+        <li>Storrs EP, et al. "High-dimensional deconstruction of pancreatic cancer identifies tumor microenvironmental and developmental stemness features that predict survival." <em>NPJ Precis Oncol</em>. 2023;7(1):105.</li>
+        <li>Chiorean EG, et al. "Ampullary Adenocarcinoma, Version 1.2023, NCCN Clinical Practice Guidelines in Oncology." <em>J Natl Compr Canc Netw</em>. 2023;21(7):753-782.</li>
+        <li>Ardeshir-Larijani F, et al. "Clinicogenomic Landscape of Metastatic Thymic Epithelial Tumors." <em>JCO Precis Oncol</em>. 2023;7:e2200465.</li>
+    </ul>
+
+    <h3 class="year-title">2022</h3>
+    <ul>
+        <li>Khaliq AM, et al. "Correction: Refining colorectal cancer classification and clinical stratification through a single-cell atlas." <em>Genome Biol</em>. 2022;23(1):156.</li>
+        <li>Khaliq AM, et al. "Refining colorectal cancer classification and clinical stratification through a single-cell atlas." <em>Genome Biol</em>. 2022;23(1):113.</li>
+    </ul>
+
+    <h3 class="year-title">2021</h3>
+    <ul>
+        <li>Kam AE, et al. "Current and emerging therapies for advanced biliary tract cancers." <em>Lancet Gastroenterol Hepatol</em>. 2021;6(11):956-969.</li>
+        <li>Devarakonda S, et al. "Genomic Profiling of Lung Adenocarcinoma in Never-Smokers." <em>J Clin Oncol</em>. 2021;39(33):3747-3758.</li>
+        <li>Larsen BM, et al. "A pan-cancer organoid platform for precision medicine." <em>Cell Rep</em>. 2021;36(4):109429.</li>
+        <li>Masood A, et al. "Non-secretory multiple myeloma with unusual TFG-ALK fusion showed dramatic response to ALK inhibition." <em>NPJ Genom Med</em>. 2021;6(1):23.</li>
+        <li>Kam AE, et al. "The Prognostic Role of the Neutrophil to Lymphocyte Ratio at Recurrence in Esophageal Squamous Cell Carcinoma: Challenges and Future Directions." <em>Ann Surg Oncol</em>. 2021;28(6):2939-2940.</li>
+    </ul>
+
+    <h3 class="year-title">2020</h3>
+    <ul>
+        <li>Grunvald MW, et al. "Current Status of Circulating Tumor DNA Liquid Biopsy in Pancreatic Cancer." <em>Int J Mol Sci</em>. 2020;21(20):7651.</li>
+        <li>Kam AE, et al. "Postoperative Chemotherapy for Thoracic Pathological T3N0M0 Esophageal Squamous Cell Carcinoma." <em>Ann Surg Oncol</em>. 2020;27(5):1314-1315.</li>
+    </ul>
+
+    <h3 class="year-title">2019</h3>
+    <ul>
+        <li>Masood A, et al. "Epidermal growth factor receptor (EGFR) tyrosine kinase inhibitors in non-small cell lung cancer harboring uncommon EGFR mutations: Focus on afatinib." <em>Semin Oncol</em>. 2019;46(3):271-283.</li>
+        <li>Imperial R, et al. "Matched Whole-Genome Sequencing (WGS) and Whole-Exome Sequencing (WES) of Tumor Tissue with Circulating Tumor DNA (ctDNA) Analysis: Complementary Modalities in Clinical Practice." <em>Cancers (Basel)</em>. 2019;11(9):1399.</li>
+        <li>Bahaj W, et al. "Radiation Recall in a Patient with Intrahepatic Cholangiocarcinoma: Case Report and a Literature Review." <em>Cureus</em>. 2019;11(6):e5020.</li>
+        <li>Jacobson RA, et al. "Evolving Clinical Utility of Liquid Biopsy in Gastrointestinal Cancers." <em>Cancers (Basel)</em>. 2019;11(8):1164.</li>
+        <li>Subramanian J, et al. "Emergence of ERBB2 Mutation as a Biomarker and an Actionable Target in Solid Cancers." <em>Oncologist</em>. 2019;24(12):e1303-e1314.</li>
+        <li>Asif S, et al. "Pembrolizumab in newly diagnosed EBV-negative extranodal natural killer/T-cell lymphoma: A case report." <em>Mol Clin Oncol</em>. 2019;10(3):397-400.</li>
+    </ul>
+
+    <h3 class="year-title">2018</h3>
+    <ul>
+        <li>Imperial R, et al. "Comparative proteogenomic analysis of right-sided colon cancer, left-sided colon cancer and rectal cancer reveals distinct mutational profiles." <em>Mol Cancer</em>. 2018;17(1):177.</li>
+        <li>Wagner AH, et al. "Recurrent WNT pathway alterations are frequent in relapsed small cell lung cancer." <em>Nat Commun</em>. 2018;9(1):3787.</li>
+        <li>Devarakonda S, et al. "Tumor Mutation Burden as a Biomarker in Resected Non-Small-Cell Lung Cancer." <em>J Clin Oncol</em>. 2018;36(30):2995-3006.</li>
+        <li>Kujtan L, et al. "The evolving genomic landscape in urothelial cancer." <em>Curr Opin Oncol</em>. 2018;30(3):197-202.</li>
+        <li>Toor OM, et al. "Correlation of Somatic Genomic Alterations Between Tissue Genomics and ctDNA Employing Next-Generation Sequencing: Analysis of Lung and Gastrointestinal Cancers." <em>Mol Cancer Ther</em>. 2018;17(5):1123-1132.</li>
+        <li>Kujtan L, et al. "The Role of Systemic Therapy in the Management of Stage I Large Cell Neuroendocrine Carcinoma of the Lung." <em>J Thorac Oncol</em>. 2018;13(5):707-714.</li>
+    </ul>
+
+    <h3 class="year-title">2017</h3>
+    <ul>
+        <li>Imperial R, et al. "Comprehensive pancancer genomic analysis reveals (RTK)-RAS-RAF-MEK as a key dysregulated pathway in cancer: Its clinical implications." <em>Semin Cancer Biol</em>. 2019;54:14-28.</li>
+        <li>Ahmed Z, et al. "Predictors for chemotherapy in early stage small cell lung carcinoma (SCLC): A National Cancer Database (NCDB) analysis." <em>Lung Cancer</em>. 2017;113:85-87.</li>
+        <li>Devarakonda S, et al. "Next-Generation Sequencing of Lung Cancers: Lessons Learned and Future Directions." <em>Hematol Oncol Clin North Am</em>. 2017;31(1):1-12.</li>
+    </ul>
+
+    <h3 class="year-title">Older Publications (2008-2016)</h3>
+    <ul>
+        <li>Morgensztern D, et al. "Adjuvant Chemotherapy for Patients with T2N0M0 NSCLC." <em>J Thorac Oncol</em>. 2016;11(10):1729-35.</li>
+        <li>Scott EC, et al. "A hot L1 retrotransposon evades somatic repression and initiates human colorectal cancer." <em>Genome Res</em>. 2016;26(6):745-55.</li>
+        <li>McDonald P, et al. "Syndrome of inappropriate anti-diuretic hormone in non-small cell lung carcinoma: a case report." <em>Ecancermedicalscience</em>. 2012;6:279.</li>
+        <li>Liu CY, et al. "Adherence to hepatitis B screening and prophylactic lamivudine for prevention of rituximab-associated hepatitis B reactivation." <em>J Oncol Pharm Pract</em>. 2013;19(1):18-23.</li>
+        <li>Masood A, et al. "Small molecule inhibitors of bcl-2 family proteins for pancreatic cancer therapy." <em>Cancers (Basel)</em>. 2011;3(2):1527-49.</li>
+        <li>Muqbil I, et al. "Progress in nanotechnology based approaches to enhance the potential of chemopreventive agents." <em>Cancers (Basel)</em>. 2011;3(1):428-45.</li>
+        <li>Hudhud KH, et al. "Neurocognitive deficits in a patient with small cell lung cancer: a case report." <em>Cases J</em>. 2008;1(1):278.</li>
+        <li>Masood A, et al. "Mediastinal plasmacytoma with multiple myeloma presenting as a diagnostic dilemma." <em>Cases J</em>. 2008;1(1):116.</li>
+    </ul>
 </div>
 <footer class="sticky-footer">
     <strong>MASOOD LAB</strong><br>
