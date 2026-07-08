@@ -6,41 +6,64 @@
     <style>
         :root { --primary-red: #811218; --white: #ffffff; --light-gray: #f9f9f9; }
         body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; background-color: var(--light-gray); }
-        header { background-color: var(--primary-red); padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: relative; }
+        header { background-color: var(--primary-red); padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         nav { display: flex; gap: 30px; align-items: center; }
+        .dropbtn { color: var(--white); text-decoration: none; font-weight: 600; cursor: pointer; }
         .dropdown { position: relative; display: inline-block; }
-        .dropbtn { color: var(--white); text-decoration: none; font-weight: 600; cursor: pointer; padding: 10px 0; }
-        .dropdown-content { display: none; position: absolute; right: 0; top: 100%; background-color: var(--white); min-width: 160px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); border-radius: 4px; z-index: 1000; }
-        .dropdown-content a { color: var(--primary-red); padding: 12px 16px; display: block; text-decoration: none; }
-        .dropdown-content a:hover { background-color: #f1f1f1; }
+        .dropdown-content { display: none; position: absolute; right: 0; background: var(--white); min-width: 200px; box-shadow: 0px 8px 16px rgba(0,0,0,0.2); z-index: 1000; }
+        .dropdown-content a { color: var(--primary-red); padding: 12px; display: block; text-decoration: none; }
         .dropdown:hover .dropdown-content { display: block; }
-        .container { max-width: 900px; margin: 3rem auto; padding: 3rem; background: var(--white); box-shadow: 0 4px 10px rgba(0,0,0,0.05); border-radius: 8px; }
+        .container { max-width: 900px; margin: 3rem auto; padding: 3rem; background: var(--white); border-radius: 8px; }
         h2 { color: var(--primary-red); border-bottom: 2px solid var(--primary-red); padding-bottom: 0.5rem; }
+        .team-grid { display: flex; flex-direction: column; gap: 30px; margin-top: 30px; }
+        .member { display: flex; align-items: flex-start; gap: 20px; }
+        .member img { width: 120px; height: 120px; border-radius: 50%; object-fit: cover; border: 2px solid var(--primary-red); flex-shrink: 0; }
+        .member-info h3 { margin: 0 0 5px 0; color: var(--primary-red); }
+        .member-info p { margin: 0; font-size: 0.95rem; }
     </style>
 </head>
 <body>
     <header>
-        <a href="index.html"><img src="assets/logo.png" alt="The Masood Lab" style="height: 150px; width: auto; display: block;"></a>
+        <a href="index.html"><img src="assets/logo.png" alt="Lab Logo" style="height: 100px;"></a>
         <nav>
-            <div class="dropdown">
-                <a class="dropbtn">Lab ▼</a>
-                <div class="dropdown-content">
-                    <a href="index.html">Home</a>
-                    <a href="people.html">People</a>
-                </div>
+            <div class="dropdown"><a class="dropbtn">Lab ▼</a>
+                <div class="dropdown-content"><a href="index.html">Home</a><a href="people.html">People</a></div>
             </div>
-            <div class="dropdown">
-                <a class="dropbtn">Research ▼</a>
-                <div class="dropdown-content">
-                    <a href="publications.html">Publications</a>
-                    <a href="news.html">News</a>
-                </div>
+            <div class="dropdown"><a class="dropbtn">Research ▼</a>
+                <div class="dropdown-content"><a href="publications.html">Publications</a><a href="news.html">News</a></div>
             </div>
         </nav>
     </header>
+
     <div class="container">
-        <h2>People</h2>
-        <p><strong>Principal Investigator:</strong> Ashiq Masood</p>
+        <h2>Our Team</h2>
+        <div class="team-grid">
+            <!-- PI & Faculty -->
+            <div class="member">
+                <img src="assets/ateeq.png" alt="Ateeq M. Khaliq">
+                <div class="member-info">
+                    <h3>Ateeq M. Khaliq, PhD</h3>
+                    <p><strong>Principal Investigator</strong></p>
+                    <p>Assistant Research Professor of Medicine</p>
+                </div>
+            </div>
+            <div class="member">
+                <img src="assets/ashiq.png" alt="Ashiq Masood">
+                <div class="member-info">
+                    <h3>Ashiq Masood, MBBS</h3>
+                    <p>Associate Professor of Medicine</p>
+                    <p>Melissa Ann Virts & Kip E. Virts Scholar in Cholangiocarcinoma Research</p>
+                    <p>Adjunct Associate Professor, School of Informatics, Computing and Engineering</p>
+                    <p>Program Leader - Gastroenterology</p>
+                </div>
+            </div>
+            <!-- Other Members -->
+            <div class="member-info"><h3>Theja Arlagadda</h3></div>
+            <div class="member-info"><h3>Bader El Farran</h3></div>
+            <div class="member-info"><h3>Meenakshi Rajamohan</h3></div>
+            <div class="member-info"><h3>Jetse Rivera-Lopez</h3></div>
+            <div class="member-info"><h3>Bing Song</h3></div>
+        </div>
     </div>
 </body>
 </html>
