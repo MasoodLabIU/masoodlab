@@ -7,17 +7,13 @@
         :root { --primary-red: #811218; --white: #ffffff; --light-gray: #f9f9f9; --footer-bg: #1a1a1a; }
         body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; background-color: var(--light-gray); padding-bottom: 350px; }
         
-        header { background-color: var(--primary-red); padding: 2rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        header { position: sticky; top: 0; z-index: 1000; background-color: var(--primary-red); padding: 1.5rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
         nav { display: flex; gap: 50px; }
         .nav-link { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1.2rem; padding: 15px 25px; border-radius: 6px; transition: background-color 0.3s, color 0.3s; }
         .nav-link:hover { background-color: var(--white); color: var(--primary-red); }
         
-        /* Full-width hero image */
         .hero-img { width: 100%; height: 600px; object-fit: cover; display: block; }
-        
         .container { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; text-align: center; }
-        
-        /* Centered title and larger mission box */
         h1 { font-size: 3.5rem; color: var(--primary-red); margin-bottom: 2rem; }
         .mission-box { background-color: var(--primary-red); color: var(--white); padding: 4rem; border-radius: 12px; font-size: 1.4rem; line-height: 1.8; text-align: left; }
         
@@ -26,7 +22,7 @@
 </head>
 <body>
 <header>
-    <a href="index.html"><img src="assets/logo.png" alt="Masood Lab" style="height: 180px; width: auto; display: block;"></a>
+    <a href="index.html"><img src="assets/logo.png" alt="Masood Lab" style="height: 120px; width: auto; display: block;"></a>
     <nav>
         <a href="index.html" class="nav-link">Home</a>
         <a href="people.html" class="nav-link">People</a>
