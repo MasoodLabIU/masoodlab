@@ -4,42 +4,83 @@
     <meta charset="UTF-8">
     <title>Masood Lab | Home</title>
     <style>
-        :root { --primary-red: #811218; --white: #ffffff; --light-gray: #f9f9f9; --footer-bg: #1a1a1a; }
-        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; background-color: var(--light-gray); padding-bottom: 175px; }
-        header { position: sticky; top: 0; z-index: 1000; background-color: var(--primary-red); padding: 0.75rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
-        header img { height: 60px; width: auto; display: block; }
-        nav { display: flex; gap: 25px; }
-        .nav-link { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1rem; padding: 7.5px 12.5px; border-radius: 6px; transition: background-color 0.3s, color 0.3s; }
-        .nav-link:hover { background-color: var(--white); color: var(--primary-red); }
-        .hero-img { width: 100%; height: 300px; object-fit: cover; display: block; }
-        .container { max-width: 1200px; margin: 2rem auto; padding: 0 2rem; text-align: center; }
-        h1 { font-size: 2.5rem; color: var(--primary-red); margin-bottom: 1.5rem; }
-        .mission-box { background-color: var(--primary-red); color: var(--white); padding: 2rem; border-radius: 8px; font-size: 1.1rem; line-height: 1.6; text-align: left; }
-        .sticky-footer { position: fixed; left: 0; bottom: 0; width: 100%; background-color: var(--footer-bg); color: #cccccc; padding: 50px 5%; font-size: 1rem; z-index: 1000; box-shadow: 0 -2px 8px rgba(0,0,0,0.4); box-sizing: border-box; }
+        :root { --primary-red: #811218; --white: #ffffff; --footer-bg: #1a1a1a; }
+        body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; }
+
+        /* Header remains sticky */
+        header { position: sticky; top: 0; z-index: 1000; background-color: var(--primary-red); padding: 0.75rem 5%; display: flex; justify-content: space-between; align-items: center; }
+        header img { height: 60px; width: auto; }
+        .nav-link { color: var(--white); text-decoration: none; font-weight: 700; margin-left: 20px; }
+
+        /* Zoom container: The parent controls the scroll duration */
+        .zoom-wrapper { height: 200vh; position: relative; }
+        
+        /* The image is sticky-positioned to "freeze" while scrolling */
+        .sticky-zoom {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            width: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* 
+           Using a CSS scroll-timeline is the modern way, 
+           but for broad compatibility, we use scale transition 
+           triggered by a small intersection observer script below.
+        */
+        .zoom-img {
+            width: 150%; /* Starts zoomed in */
+            height: 150%;
+            object-fit: cover;
+            transition: transform 0.1s ease-out;
+            will-change: transform;
+        }
+
+        .content-section { padding: 5rem 10%; background: #fff; position: relative; z-index: 10; }
+        footer { background: var(--footer-bg); color: #ccc; padding: 50px 5%; text-align: center; }
     </style>
 </head>
 <body>
+
 <header>
     <a href="index.html"><img src="assets/logo.png" alt="Masood Lab"></a>
     <nav>
         <a href="index.html" class="nav-link">Home</a>
         <a href="people.html" class="nav-link">People</a>
         <a href="publications.html" class="nav-link">Publications</a>
-        <a href="news.html" class="nav-link">News</a>
-        <a href="contact.html" class="nav-link">Contact</a>
     </nav>
 </header>
-<img src="assets/hits.png" alt="Masood Lab Campus" class="hero-img">
-<div class="container">
-    <h1>Masood Lab</h1>
-    <div class="mission-box">
-        <p>At Masood Lab, our mission is to unravel the intricate world of tumors and their microenvironments at the single-cell level. We employ cutting-edge single-cell and spatial techniques, supported by advanced computational analysis, to uncover novel biomarkers and potent therapeutic solutions.</p>
+
+<div class="zoom-wrapper">
+    <div class="sticky-zoom">
+        <img src="assets/hits.png" alt="Lab Research" class="zoom-img" id="hero-img">
     </div>
 </div>
-<footer class="sticky-footer">
+
+<div class="content-section">
+    <h1>Welcome to the Masood Lab</h1>
+    <p>Translational oncology and computational biology research.</p>
+</div>
+
+<footer>
     <strong>MASOOD LAB</strong><br>
-    Health Information and Translational Sciences Building | Indiana University School of Medicine<br>
-    410 W. 10th Street, 5th Floor, Suite 5000 | Indianapolis, IN 46202
+    IUI Department of Medicine
 </footer>
+
+<script>
+    // Minimal JS to map scroll position to image scale
+    window.addEventListener('scroll', () => {
+        const img = document.getElementById('hero-img');
+        const scrollY = window.scrollY;
+        // Scale from 1.5 down to 1.0 based on scroll
+        const scale = Math.max(1, 1.5 - (scrollY / 1000));
+        img.style.transform = `scale(${scale})`;
+    });
+</script>
+
 </body>
 </html>
