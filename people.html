@@ -6,16 +6,22 @@
     <style>
         :root { --primary-red: #811218; --white: #ffffff; --light-gray: #f9f9f9; --footer-bg: #1a1a1a; --card-gray: #e0e0e0; }
         body { margin: 0; font-family: 'Helvetica Neue', Arial, sans-serif; color: #333; background-color: var(--light-gray); padding-bottom: 175px; }
+        
+        /* Compact Header */
         header { position: sticky; top: 0; z-index: 1000; background-color: var(--primary-red); padding: 0.75rem 5%; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.2); }
         header img { height: 60px; width: auto; display: block; }
         nav { display: flex; gap: 25px; }
         .nav-link { color: var(--white); text-decoration: none; font-weight: 700; font-size: 1rem; padding: 7.5px 12.5px; border-radius: 6px; transition: background-color 0.3s, color 0.3s; }
         .nav-link:hover { background-color: var(--white); color: var(--primary-red); }
+        
         .container { max-width: 1000px; margin: 3rem auto; padding: 2rem; }
         h2 { color: var(--primary-red); border-bottom: 2px solid var(--primary-red); padding-bottom: 0.5rem; text-align: center; margin-bottom: 3rem; }
+        
         .member-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
         .member-card { background-color: var(--card-gray); padding: 15px; }
         .member-card img { width: 100%; height: 250px; object-fit: cover; margin-bottom: 15px; }
+        
+        /* Compact Sticky Footer */
         .sticky-footer { position: fixed; left: 0; bottom: 0; width: 100%; background-color: var(--footer-bg); color: #cccccc; padding: 50px 5%; font-size: 1rem; z-index: 1000; box-shadow: 0 -2px 8px rgba(0,0,0,0.4); box-sizing: border-box; }
     </style>
 </head>
@@ -30,6 +36,7 @@
         <a href="contact.html" class="nav-link">Contact</a>
     </nav>
 </header>
+
 <div class="container">
     <h2>Current Lab Members</h2>
     <div class="member-grid">
@@ -39,9 +46,10 @@
         <div class="member-card"><img src="assets/bader.png" alt="Bader El Farran"><h3>Bader El Farran</h3></div>
         <div class="member-card"><h3>Meenakshi Rajamohan</h3></div>
         <div class="member-card"><h3>Jetse Rivera-Lopez</h3></div>
-        <div class="member-card"><h3>Bing Song</h3></div>
+        <div class="member-card"><img src="assets/song.png" alt="Bing Song"><h3>Bing Song</h3></div>
     </div>
 </div>
+
 <footer class="sticky-footer">
     <strong>MASOOD LAB</strong><br>
     Health Information and Translational Sciences Building | Indiana University School of Medicine | 410 W. 10th Street, 5th Floor, Suite 5000 | Indianapolis, IN 46202
